@@ -1,6 +1,8 @@
 import logo from '../../Assets/img/logo.png'
 import { FooterContainer, MenuLinks } from './styles'
 import instagram from '../../Assets/img/instagramRosa.png'
+import facebook from '../../Assets/img/facebook.png'
+import twitter from '../../Assets/img/twitter.png'
 
 const Footer = () => (
   <>
@@ -19,15 +21,15 @@ const Footer = () => (
           </button>
           <button className="btnMargin">
             <img
-              src={instagram}
+              src={facebook}
               alt="link button rede social facebook"
               title="inativo"
             />
           </button>
           <button>
             <img
-              src={instagram}
-              alt="link button rede social X(Twitter)"
+              src={twitter}
+              alt="link rede social X(Twitter)"
               title="inativo"
             />
           </button>
