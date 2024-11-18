@@ -21,7 +21,6 @@ export const Container = styled.div`
   align-items: center;
 
   h1 {
-    margin-top: 20px;
     width: 125px;
     height: 57.5px;
   }
