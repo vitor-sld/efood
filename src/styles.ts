@@ -3,7 +3,8 @@ import { createGlobalStyle } from 'styled-components'
 export const cores = {
   rosaForte: 'rgba(230, 103, 103, 1);',
   rosaMedio: 'rgba(255, 235, 217, 1);',
-  rosaClaro: 'rgba(255, 248, 242, 1)'
+  rosaClaro: 'rgba(255, 248, 242, 1)',
+  fonteBranca: 'rgba(255, 255, 255, 1)'
 }
 
 const GlobalStyles = createGlobalStyle`

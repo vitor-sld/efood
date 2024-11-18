@@ -6,6 +6,7 @@ import Footer from './Components/Footer'
 
 import { BrowserRouter } from 'react-router-dom'
 import Rotas from './Rotas'
+import Modal from './Components/Modal'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Rotas />
       </BrowserRouter>
       <Footer />
+      <Modal />
     </>
   )
 }
