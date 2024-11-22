@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import salmao from '../../Assets/img/Rectangle.png'
+import { Props } from '.'
 
-export const BannerContainer = styled.div`
-  background-image: url(${salmao});
+export const BannerContainer = styled.div<Omit<Props, 'title' | 'type'>>`
+  background-image: url(${(props) => props.imageLink});
   width: 100vw;
   height: 280px;
   background-repeat: no-repeat;

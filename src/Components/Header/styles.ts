@@ -44,10 +44,11 @@ export const MenuResponsive = styled.div<Props>`
   align-items: center;
   justify-content: ${(props) =>
     props.size == 'big' ? 'center' : 'space-between'};
-  height: ${(props) => (props.size == 'big' ? 'auto' : '100%')};
+  height: 163px;
 
   h1 {
     text-align: center;
+    flex: 2;
   }
 
   a,
@@ -56,5 +57,10 @@ export const MenuResponsive = styled.div<Props>`
     font-size: 18px;
     font-weight: bold;
     color: ${cores.rosaForte};
+    flex: 1;
+  }
+
+  span {
+    text-align: end;
   }
 `

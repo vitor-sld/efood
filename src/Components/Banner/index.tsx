@@ -1,12 +1,18 @@
 import { BannerContainer, DarknessEffect, InfosBanner } from './styles'
 
-const Banner = () => (
+export type Props = {
+  imageLink: string
+  type: string
+  title: string
+}
+
+const Banner = ({ imageLink, type, title }: Props) => (
   <>
-    <BannerContainer>
+    <BannerContainer imageLink={imageLink}>
       <DarknessEffect>
         <InfosBanner className="container">
-          <span>Italiana</span>
-          <h4>La Dolce Vita Trattoria</h4>
+          <span>{type}</span>
+          <h4>{title}</h4>
         </InfosBanner>
       </DarknessEffect>
     </BannerContainer>

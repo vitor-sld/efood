@@ -2,32 +2,21 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const ProductContainer = styled.div`
-  position: relative;
+  height: 100%;
+  background-color: aqua;
 `
 
 export const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
   padding: 8px 10px 0;
-  cursor: pointer;
-  border: 1px solid ${cores.rosaForte};
   border-top: 0;
+  height: 100%;
+  max-height: 100%;
 
-  p {
-    margin-bottom: 16px;
-    line-height: 22px;
-    color: ${cores.rosaForte};
-  }
-  button {
-    margin-bottom: 8px;
-    width: 82px;
-    padding: 6px 4px;
-    font-weight: bold;
-    font-size: 14px;
-    background-color: ${cores.rosaForte};
-    border: none;
-    cursor: pointer;
-    color: white;
-  }
   &.colored {
     background-color: ${cores.rosaForte};
     color: ${cores.rosaMedio};
@@ -54,30 +43,25 @@ export const ImageProduct = styled.img`
   }
 `
 
-export const TagsContainer = styled.div`
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background-color: aliceblue;
+export const TextContainer = styled.div`
+  p {
+    margin-bottom: 16px;
+    line-height: 22px;
+    color: ${cores.rosaClaro};
+  }
+  h3 {
+    color: ${cores.rosaClaro};
+  }
 `
 
-export const TitleRate = styled.div`
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  font-size: 18px;
-  margin-bottom: 16px;
-
-  span {
-    display: flex;
-    align-items: center;
-
-    img {
-      display: block;
-      object-fit: cover;
-      width: 18px;
-      height: 18px;
-      margin-left: 8px;
-    }
-  }
+export const ButtonInfos = styled.button`
+  margin-bottom: 8px;
+  width: 82px;
+  padding: 6px 4px;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: ${cores.rosaForte};
+  border: none;
+  cursor: pointer;
+  color: white;
 `

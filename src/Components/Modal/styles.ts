@@ -9,6 +9,10 @@ export const ModalContainer = styled.div`
   left: 0;
   position: fixed;
   z-index: 1;
+
+  &.isOpen {
+    display: block;
+  }
 `
 
 export const ModalProduct = styled.div`
@@ -28,6 +32,14 @@ export const ModalProduct = styled.div`
     width: 280px;
     object-fit: cover;
     margin-right: 24px;
+  }
+
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
   }
 `
 export const Infos = styled.div`
@@ -68,4 +80,15 @@ export const ButtonModal = styled.button`
   > span {
     margin-left: 3px;
   }
+`
+
+export const CloseButton = styled.button`
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: 8px;
+  top: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 `

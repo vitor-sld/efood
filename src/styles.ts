@@ -13,10 +13,12 @@ const GlobalStyles = createGlobalStyle`
 padding: 0;
 box-sizing: border-box;
 text-decoration: none;
-
 }
 body{
   font-family: "Roboto", sans-serif;
+}
+a{
+  text-decoration: none;
 }
 
 .container{
