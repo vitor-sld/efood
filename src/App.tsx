@@ -9,6 +9,7 @@ import { BrowserRouter } from 'react-router-dom'
 import Rotas from './Rotas'
 import Modal from './Components/Modal'
 import { Provider } from 'react-redux'
+import Cart from './Components/Cart'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       </BrowserRouter>
       <Footer />
       <Modal />
+      <Cart />
     </Provider>
   )
 }

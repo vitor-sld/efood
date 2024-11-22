@@ -58,6 +58,7 @@ export const MenuResponsive = styled.div<Props>`
     font-weight: bold;
     color: ${cores.rosaForte};
     flex: 1;
+    cursor: pointer;
   }
 
   span {

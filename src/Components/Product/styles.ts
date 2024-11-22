@@ -53,7 +53,6 @@ export const TextContainer = styled.div`
     color: ${cores.rosaClaro};
   }
 `
-
 export const ButtonInfos = styled.button`
   margin-bottom: 8px;
   width: 82px;

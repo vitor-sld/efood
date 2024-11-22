@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 
 import { RootReducer } from '../../store'
-import { closeModal } from '../../store/reducer/cart'
+import { addCart, closeModal } from '../../store/reducer/cart'
 
 import close from '../../Assets/img/close.png'
 
@@ -19,6 +19,10 @@ const Modal = () => {
   const { modalRestaurant } = useSelector(
     (state: RootReducer) => state.cartReducer
   )
+  const confirmAndClose = () => {
+    dispatch(addCart(modalRestaurant!))
+    dispatch(closeModal())
+  }
 
   if (modalRestaurant != null) {
     return (
@@ -32,7 +36,7 @@ const Modal = () => {
             <h4>{modalRestaurant.name}</h4>
             <p>{modalRestaurant.description}</p>
             <span>{modalRestaurant.recommendation}</span>
-            <ButtonModal>
+            <ButtonModal onClick={() => confirmAndClose()}>
               Adicionar ao carrinho - <span>R$ {modalRestaurant.price}</span>
             </ButtonModal>
           </Infos>
@@ -41,7 +45,7 @@ const Modal = () => {
       </ModalContainer>
     )
   }
-  return <p>Carregando</p>
+  return <></>
 }
 
 export default Modal
