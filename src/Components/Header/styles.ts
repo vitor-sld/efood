@@ -51,7 +51,7 @@ export const MenuResponsive = styled.div<Props>`
     flex: 2;
   }
 
-  a,
+  .link,
   span {
     display: ${(props) => (props.size == 'big' ? 'none' : 'block')};
     font-size: 18px;
