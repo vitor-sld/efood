@@ -3,13 +3,16 @@ import { FooterContainer, MenuLinks } from './styles'
 import instagram from '../../Assets/img/instagramRosa.png'
 import facebook from '../../Assets/img/facebook.png'
 import twitter from '../../Assets/img/twitter.png'
+import { Link } from 'react-router-dom'
 
 const Footer = () => (
   <>
     <FooterContainer>
       <div className="container">
         <h2>
-          <img src={logo} alt="" />
+          <Link to="/">
+            <img src={logo} alt="Efood" />
+          </Link>
         </h2>
         <MenuLinks>
           <button>

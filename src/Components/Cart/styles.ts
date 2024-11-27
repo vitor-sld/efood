@@ -30,6 +30,13 @@ export const CartDiv = styled.div`
   height: 100vh;
   background-color: ${cores.rosaForte};
 
+  h6 {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
   > p {
     color: white;
     text-align: center;
@@ -92,8 +99,49 @@ export const Button = styled.button`
   padding: 6px 4px;
   font-weight: bold;
   font-size: 14px;
-  background-color: ${cores.rosaClaro};
+  background-color: ${cores.rosaMedio};
   border: none;
   cursor: pointer;
   color: ${cores.rosaForte};
+`
+
+export const InputGroup = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  flex: 1;
+
+  &.inputTwo {
+    flex: 2;
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: white;
+  }
+  input {
+    margin-bottom: 8px;
+    padding: 8px;
+    border: 1px solid transparent;
+    width: 100%;
+    background-color: ${cores.rosaMedio};
+    color: black;
+
+    &.error {
+      border: red;
+    }
+  }
+`
+
+export const Row = styled.div`
+  max-width: 100%;
+  display: flex;
+  gap: 34px;
+`
+
+export const ThanksParagraph = styled.p`
+  font-size: 14px;
+  color: ${cores.rosaClaro};
+  margin-bottom: 16px;
 `

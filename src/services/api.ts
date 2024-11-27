@@ -1,9 +1,42 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-// Definindo a API
+type PurchaseResponse = {
+  orderId: string
+}
+
+type Product = {
+  id: number
+  price: number
+}
+
+type PurchaseBody = {
+  products: Product[]
+  delivery: {
+    receiver: string
+    address: {
+      description: string
+      city: string
+      zipCode: string
+      number: number
+      complement: string
+    }
+  }
+  payment: {
+    card: {
+      name: string
+      number: string
+      code: number
+      expires: {
+        month: number
+        year: number
+      }
+    }
+  }
+}
+
 const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://fake-api-tau.vercel.app/api/efood/' // URL base da API
+    baseUrl: 'https://fake-api-tau.vercel.app/api/efood/'
   }),
   endpoints: (builder) => ({
     getFeaturedRestaurant: builder.query<Restaurant[], void>({
@@ -11,10 +44,20 @@ const api = createApi({
     }),
     getRestaurant: builder.query<Restaurant, string>({
       query: (id: string) => `restaurantes/${id}`
+    }),
+    purchase: builder.mutation<PurchaseResponse, PurchaseBody>({
+      query: (body) => ({
+        url: 'checkout',
+        method: 'POST',
+        body
+      })
     })
   })
 })
 
-// Exportando os hooks gerados automaticamente para os endpoints
-export const { useGetFeaturedRestaurantQuery, useGetRestaurantQuery } = api
+export const {
+  useGetFeaturedRestaurantQuery,
+  useGetRestaurantQuery,
+  usePurchaseMutation
+} = api
 export default api

@@ -33,14 +33,6 @@ export const ModalProduct = styled.div`
     object-fit: cover;
     margin-right: 24px;
   }
-
-
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
 `
 export const Infos = styled.div`
   height: 100%;
@@ -91,4 +83,10 @@ export const CloseButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  > img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+  }
 `

@@ -1,15 +1,21 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
+type PurchaseStepsType = {
+  step: 'cart' | 'address' | 'card' | 'thankspage'
+}
+
 type RestaurantsList = {
   cartList: PropsProduct[]
   modalRestaurant: PropsProduct | null
   isCartOpen: boolean
+  step: 'cart' | 'address' | 'card' | 'thankspage'
 }
 
 const initialState: RestaurantsList = {
   cartList: [],
   modalRestaurant: null,
-  isCartOpen: false
+  isCartOpen: false,
+  step: 'cart'
 }
 
 const cartSlice = createSlice({
@@ -46,10 +52,23 @@ const cartSlice = createSlice({
       )
 
       state.cartList = newState
+    },
+    purchaseSteps: (state, action: PayloadAction<PurchaseStepsType>) => {
+      state.step = action.payload.step
+    },
+    clear: (state) => {
+      state.cartList = []
     }
   }
 })
 
-export const { addModal, closeModal, addCart, toggleCart, removeCart } =
-  cartSlice.actions
+export const {
+  addModal,
+  closeModal,
+  addCart,
+  toggleCart,
+  removeCart,
+  purchaseSteps,
+  clear
+} = cartSlice.actions
 export default cartSlice.reducer

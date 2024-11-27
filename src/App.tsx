@@ -17,10 +17,10 @@ function App() {
       <BrowserRouter>
         <GlobalStyles />
         <Rotas />
+        <Footer />
+        <Modal />
+        <Cart />
       </BrowserRouter>
-      <Footer />
-      <Modal />
-      <Cart />
     </Provider>
   )
 }

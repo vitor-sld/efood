@@ -21,9 +21,9 @@ const Header = ({ size }: Props) => {
             <Link to="/" className="link">
               Restaurantes
             </Link>
-            <h1>
+            <Link to="/">
               <img src={logo} alt="Efood" />
-            </h1>
+            </Link>
             <span onClick={() => dispatch(toggleCart())}>
               {' '}
               {cartList.length} - produto(s) no carrinho
